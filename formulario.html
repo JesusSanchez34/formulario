@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Formulario Dragon Ball</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #F7F7F7;
+    }
+
+    h1 {
+      color: #DB0000;
+      text-align: center;
+    }
+
+    .container {
+      width: 400px;
+      margin: 0 auto;
+      background-color: #FFF;
+      padding: 20px;
+      border-radius: 5px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    label {
+      display: block;
+      margin-bottom: 10px;
+      color: #333;
+    }
+
+    input[type="text"],
+    textarea {
+      width: 100%;
+      padding: 5px;
+      border: 1px solid #CCC;
+      border-radius: 3px;
+    }
+
+    input[type="submit"],
+    input[type="button"] {
+      background-color: #DB0000;
+      color: #FFF;
+      border: none;
+      padding: 10px 20px;
+      margin-top: 10px;
+      cursor: pointer;
+    }
+
+    input[type="submit"]:hover,
+    input[type="button"]:hover {
+      background-color: #A30000;
+    }
+  </style>
+  <script>
+    function limpiarFormulario() {
+      document.getElementById("formulario-dragon-ball").reset();
+    }
+  </script>
+</head>
+<body>
+  <div class="container">
+    <h1>Formulario de Dragon Ball</h1>
+    <form id="formulario-dragon-ball">
+      <label for="nombre">Nombre:</label>
+      <input type="text" id="nombre" name="nombre" required>
+
+      <label for="email">Correo electrónico:</label>
+      <input type="text" id="email" name="email" required>
+
+      <label for="personaje">Personaje favorito:</label>
+      <input type="text" id="personaje" name="personaje" required>
+
+      <label for="comentario">Comentario:</label>
+      <textarea id="comentario" name="comentario" required></textarea>
+
+      <input type="submit" value="Enviar">
+      <input type="button" value="Borrar" onclick="limpiarFormulario()">
+    </form>
+  </div>
+</body>
+</html>
